@@ -1,0 +1,12 @@
+---
+---
+
+@import '_config';
+@import '_mobilesize';
+@import '_main';
+
+.post.index {
+    .post-listing {
+        display: block;
+    }
+}

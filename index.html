@@ -1,0 +1,31 @@
+---
+title: Home
+layout: main
+---
+<div id="frontinfo">
+    <h1>
+        I am a <a target="_blank" href="http://web.cs.toronto.edu">Computer Science</a> master's student at the
+        <a target="_blank" href="https://www.utoronto.ca">University of Toronto</a>.
+    </h1>
+    <h3>
+      Previously I was a <a target="_blank" href="https://uwaterloo.ca/software-engineering">Software Engineering</a>
+      student at the <a target="_blank" href="https://uwaterloo.ca">University of Waterloo</a>.
+    </h3>
+    <h3>
+        You can fork me on <a target="_blank" href="https://github.com/geoffxy">GitHub</a>, follow me on
+        <a target="_blank" href="https://twitter.com/GeoffCodes">Twitter</a> and
+        <a target="_blank" href="https://instagram.com/geoffxy">Instagram</a>, and also read my writing below.
+    </h3>
+</div>
+<div class="posts-list">
+{% for post in site.posts %}
+    <div class="post excerpt">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="post-content">
+            <p class="post-date">{{ post.date | date: "%B %e, %Y" }}</p>
+            {{ post.excerpt }}
+            <a class="readmore" href="{{ post.url }}">Read more...</a>
+        </div>
+    </div>
+{% endfor %}
+</div>
