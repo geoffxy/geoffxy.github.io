@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Ray Tracing | Geoffrey Yu</title>
+
+<link href="/css/all.css" rel="stylesheet" type="text/css" />
+<link href="/css/desktop.css" media="screen and (min-width: 620px)" rel="stylesheet" type="text/css" />
+<link href="/css/mobile.css" media="screen and (max-width: 619px)" rel="stylesheet" type="text/css" />
+
+<link href="/css/lightbox.min.css" rel="stylesheet" type="text/css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="/js/lightbox-plus-jquery.min.js"></script>
+<script type="text/javascript">
+  lightbox.option({
+    'imageFadeDuration': 0,
+  });
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41936240-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-41936240-1');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+</head>
+<body>
+<div id="wrapper">
+<div id="wrapper-content">
+  <div id="color-bar"></div>
+  <div id="page-header">
+  <div id="page-header-content">
+    <div id="page-header-name"><a href="/">Geoffrey Yu</a></div>
+    <div id="page-header-backlink">
+      
+        <a href="/">&laquo; Back to home</a>
+      
+    </div>
+  </div>
+</div>
+<div id="content">
+  <h1 id="ray-tracing">Ray Tracing</h1>
+
+<p>These are the images that I generated using the ray tracer I wrote as my final project for CS 488
+(Introduction to Computer Graphics) offered at the University of Waterloo. I took the course in the Spring 2017 term
+with Professor Gladimir Baranoski.</p>
+
+<p>My ray tracer needed to demonstrate ten distinct features, each referred to as an objective. They are listed below
+along with the generated image(s) that demonstrate the feature in question. Click on each image to enlarge it.</p>
+
+<h3 id="objective-1--primitives--cylinder-and-cone">Objective 1 – Primitives – Cylinder and Cone</h3>
+
+<p>A cylinder and cone primitive were added. These can be arbitrarily transformed using hierarchical transformations.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj1-primitives.png" data-lightbox="obj1" data-title="Cones, cylinders, and a sphere and cube.">
+    <img src="thumbnails/obj1-primitives.png" alt="Primitives" />
+  </a>
+</p>
+
+<h3 id="objective-2--constructive-solid-geometry-csg">Objective 2 – Constructive Solid Geometry (CSG)</h3>
+
+<p>Using constructive solid geometry, primitives can be combined together using union, intersection, and difference
+operations. The primitives can be combined arbitrarily by composing the CSG operations together in a tree, allowing for
+creating complex models.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj2-csg-1.png" data-lightbox="obj2" data-title="Primitives can be combined using an arbitrary number of intersections, difference, and union operations.">
+    <img src="thumbnails/obj2-csg-1.png" alt="Constructive solid geometry" />
+  </a>
+  <a href="images/obj2-csg-2.png" data-lightbox="obj2" data-title="The outer rim of a globe, constructed out of primitives by using CSG.">
+    <img src="thumbnails/obj2-csg-2.png" alt="Constructive solid geometry" />
+  </a>
+</p>
+
+<h3 id="objective-3--refraction">Objective 3 – Refraction</h3>
+
+<p>Refraction occurs when light travels between different mediums where it either slows down or speeds up, which results
+in interesting effects depending on the geometry of the primitive. Each primitive can be transparent, but the images
+below just show transparent spheres and cubes.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj3-refraction175.png" data-lightbox="obj3" data-title="The transparent objects have an index of refraction of 1.75, which is similar to sapphire.">
+    <img src="thumbnails/obj3-refraction175.png" alt="Index of refraction 1.75" />
+  </a>
+  <a href="images/obj3-refraction242.png" data-lightbox="obj3" data-title="The transparent objects have an index of refraction of 2.42, which is similar to diamond.">
+    <img src="thumbnails/obj3-refraction242.png" alt="Index of refraction 2.42" />
+  </a>
+</p>
+
+<h3 id="objective-4--texture-mapping">Objective 4 – Texture Mapping</h3>
+
+<p>Every primitive can be textured. Each face on the primitive can also be independently textured. Texture mapping is
+performed by mapping the surface intersection point on the primitive to UV coordinates, which are then mapped to the
+texture.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj4-texture.png" data-lightbox="obj4" data-title="Each primitive and each face can be independently textured.">
+    <img src="thumbnails/obj4-texture.png" alt="Texture mapping" />
+  </a>
+</p>
+
+<h3 id="objective-5--bump-mapping">Objective 5 – Bump Mapping</h3>
+
+<p>Bumps on a surface can be simulated by perturbing the surface normal according to a provided bump map. Then when
+lighting calculations are performed, shadows are cast on the surface to simulate roughness even though the surface
+itself is not deformed. Bump mapping can be combined with texture mapping to create more realistic looking objects.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj5-bump-left.png" data-lightbox="obj5" data-title="Bump map with a light source off to the left.">
+    <img src="thumbnails/obj5-bump-left.png" alt="Bump mapping with light off to the left" />
+  </a>
+  <a href="images/obj5-bump-right.png" data-lightbox="obj5" data-title="Bump map with a light source off to the right.">
+    <img src="thumbnails/obj5-bump-right.png" alt="Bump mapping with light off to the right" />
+  </a>
+  <a href="images/obj5-bump-earth-left.png" data-lightbox="obj5" data-title="Bump map combined with a texture. The light source is off to the left.">
+    <img src="thumbnails/obj5-bump-earth-left.png" alt="Bump and texture mapping with light off to the left" />
+  </a>
+  <a href="images/obj5-bump-earth-right.png" data-lightbox="obj5" data-title="Bump map combined with a texture. The light source is off to the right.">
+    <img src="thumbnails/obj5-bump-earth-right.png" alt="Bump and texture mapping with light off to the left" />
+  </a>
+</p>
+
+<h3 id="objective-6--anti-aliasing-using-adaptive-supersampling">Objective 6 – Anti-aliasing using Adaptive Supersampling</h3>
+
+<p>Without applying anti-aliasing techniques the generated images can look jagged, especially at low resolutions. However
+supersampling every pixel is expensive, especially when the pixel is not on an “edge”. Adaptive supersampling is
+performed by initially sampling each pixel 4 times and only performing more sampling if the colours of the four samples
+differ by some threshold amount.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj6-aliasing-with.png" data-lightbox="obj6" data-title="An image without adaptive supersampling. Aliasing is visible.">
+    <img src="thumbnails/obj6-aliasing-with.png" alt="A scene with aliasing visible" />
+  </a>
+  <a href="images/obj6-aliasing-edges-0.05.png" data-lightbox="obj6" data-title="Edges detected using adaptive supersampling are shown in red. A threshold of 0.05 was used.">
+    <img src="thumbnails/obj6-aliasing-edges-0.05.png" alt="A scene with edges shown" />
+  </a>
+  <a href="images/obj6-aliasing-without.png" data-lightbox="obj6" data-title="An image with adaptive supersamping (threshold 0.05).">
+    <img src="thumbnails/obj6-aliasing-without.png" alt="A scene with adaptive sampling" />
+  </a>
+</p>
+
+<h3 id="objective-7--soft-shadows">Objective 7 – Soft Shadows</h3>
+
+<p>Point light sources create harsh rigid shadows. To simulate the soft shadow effect given off by an area light multiple
+shadow rays are traced per intersection to random spots on the area light, with the result averaged.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj7-softshadows-point.png" data-lightbox="obj7" data-title="A scene with a point light and hard shadows.">
+    <img src="thumbnails/obj7-softshadows-point.png" alt="A scene with hard shadows" />
+  </a>
+  <a href="images/obj7-softshadows-area.png" data-lightbox="obj7" data-title="The same scene with an area light and soft shadows.">
+    <img src="thumbnails/obj7-softshadows-area.png" alt="A scene with soft shadows" />
+  </a>
+</p>
+
+<h3 id="objective-8--depth-of-field">Objective 8 – Depth of Field</h3>
+
+<p>Rays are normally cast from a single point. To simulate a depth of field effect rays can instead be cast from an area,
+which mimics a camera aperture. Rays can be made to all converge at a specified focal distance, which is where the
+image will appear to be in focus. The larger the aperture, the shorter the depth of field (distance where the image
+appears in focus).</p>
+
+<p class="raytrace-group">
+  <a href="images/obj8-dof-all.png" data-lightbox="obj8" data-title="A scene where each object is in focus.">
+    <img src="thumbnails/obj8-dof-all.png" alt="Everything is in focus" />
+  </a>
+  <a href="images/obj8-dof-near.png" data-lightbox="obj8" data-title="The near object is in focus.">
+    <img src="thumbnails/obj8-dof-near.png" alt="The near object is in focus" />
+  </a>
+  <a href="images/obj8-dof-middle.png" data-lightbox="obj8" data-title="The middle object is in focus.">
+    <img src="thumbnails/obj8-dof-middle.png" alt="The middle object is in focus" />
+  </a>
+  <a href="images/obj8-dof-far.png" data-lightbox="obj8" data-title="The far object is in focus.">
+    <img src="thumbnails/obj8-dof-far.png" alt="The far object is in focus" />
+  </a>
+</p>
+
+<h3 id="objective-9--glossy-reflection">Objective 9 – Glossy Reflection</h3>
+
+<p>Glossy reflection is simulated by randomly perturbing the reflected ray direction. The more glossy the object, the more
+a reflected ray can be perturbed. This gives a blurred reflection effect.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj9-glossy-specular.png" data-lightbox="obj9" data-title="Mirrors with specular reflection (perfect reflection).">
+    <img src="thumbnails/obj9-glossy-specular.png" alt="Specular reflection" />
+  </a>
+  <a href="images/obj9-glossy.png" data-lightbox="obj9" data-title="Glossy mirrors showing a blurred reflection.">
+    <img src="thumbnails/obj9-glossy.png" alt="Glossy reflection" />
+  </a>
+</p>
+
+<h3 id="objective-10--final-scene">Objective 10 – Final Scene</h3>
+
+<p>All features (except depth of field) were combined to create this final scene. It depicts chemical ball-and-stick
+models for water and methane as well as a globe model.</p>
+
+<p class="raytrace-group">
+  <a href="images/obj10-finalscene.png" data-lightbox="obj10">
+    <img src="thumbnails/obj10-finalscene.png" alt="Final scene" />
+  </a>
+</p>
+
+<h3 id="extra-feature--multithreading">Extra Feature – Multithreading</h3>
+
+<p>Multithreading was added to decrease rendering times. The image is split into 25 x 25 pixel chunks, which are traced
+using the threads that are available.</p>
+
+<p>The scene for Objective 1 was rendered at a resolution of 300 by 300 pixels using 1, 2, 4, 8, 16, and 32 threads. The
+time it took to render the scene was recorded and used to produce the chart below. This timing data was obtained on
+gl14 in the graphics lab.</p>
+
+<p class="raytrace-group">
+  <img src="images/extra-multithreading.png" alt="Chart showing render times using multiple threads" />
+</p>
+
+</div>
+
+</div>
+<footer>
+  Copyright &copy; 2020 Geoffrey Yu.
+</footer>
+</div>
+</body>
+</html>

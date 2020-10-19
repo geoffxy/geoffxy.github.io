@@ -1,7 +1,0 @@
-permalink:  pretty
-excerpt_separator: <!-- readmore -->
-highlighter: rouge
-exclude: ['Gemfile.lock', 'Gemfile', 'README.md', 'watch.sh']
-sass:
-  sass_dir: _sass
-  style: compressed

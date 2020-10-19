@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "desktop.css",
+	"sources": [
+		"desktop.scss",
+		"_sass/variables.scss"
+	],
+	"sourcesContent": [
+		"@import 'variables';\n\n#main-header {\n  justify-content: center;\n  align-items: center;\n  margin: ($space * 2) 0 0 0;\n}\n\n#main-header-info {\n  margin-left: $space / 2;\n}\n\n#main-header-image {\n  margin-right: $space;\n\n  img {\n    width: 180px;\n  }\n}\n\n#news-blog {\n  display: flex;\n  justify-content: space-between;\n  margin-right: -$section-spacing;\n\n  .column-section {\n    flex: 1;\n    margin-right: $section-spacing;\n  }\n}\n",
+		"// Spacing\n$site-width: 800px;\n$space: 20px;\n$section-spacing: $space * 1.5;\n\n// Fonts\n$sourcesans: 'Source Sans Pro', sans-serif;\n$bold-weight: 600;\n$body-font-size: 1em;\n\n// Borders\n$heading-border: 1px solid #dedede;\n$header-shadow: 0px 0px 8px 0px #c4c4c4;\n\n// Colors\n$dark-accent: #1f3548;\n$accent: #316694;\n$link: #1d67d6;\n$link-hover: #7aafff;\n$light-grey: #eee;\n"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,YAAY,AAAC,CACX,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,IAAY,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAC3B,AAED,AAAA,iBAAiB,AAAC,CAChB,WAAW,CAAE,IAAU,CACxB,AAED,AAAA,kBAAkB,AAAC,CACjB,YAAY,CCXN,IAAI,CDgBX,AAND,AAGE,kBAHgB,CAGhB,GAAG,AAAC,CACF,KAAK,CAAE,KAAK,CACb,AAGH,AAAA,UAAU,AAAC,CACT,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,aAAa,CAC9B,YAAY,CCpBI,KAAY,CD0B7B,AATD,AAKE,UALQ,CAKR,eAAe,AAAC,CACd,IAAI,CAAE,CAAC,CACP,YAAY,CCxBE,IAAY,CDyB3B"
+}
