@@ -6,9 +6,9 @@
 		"_sass/variables.scss"
 	],
 	"sourcesContent": [
-		"@import 'variables';\n\n#main-header {\n  flex-flow: column-reverse;\n}\n\n#main-header-info {\n  margin: 0 auto;\n  padding: $space;\n}\n\n#main-header-image {\n  margin: ($space / 4) auto 0 auto;\n\n  img {\n    width: 200px;\n  }\n}\n\n#news {\n  margin-bottom: $section-spacing;\n}\n",
-		"// Spacing\n$site-width: 800px;\n$space: 20px;\n$section-spacing: $space * 1.5;\n\n// Fonts\n$sourcesans: 'Source Sans Pro', sans-serif;\n$bold-weight: 600;\n$body-font-size: 1em;\n\n// Borders\n$heading-border: 1px solid #dedede;\n$header-shadow: 0px 0px 8px 0px #c4c4c4;\n\n// Colors\n$dark-accent: #1f3548;\n$accent: #316694;\n$link: #1d67d6;\n$link-hover: #7aafff;\n$light-grey: #eee;\n"
+		"@import 'variables';\n\n#main-header {\n  flex-flow: column-reverse;\n}\n\n#main-header-info {\n  margin: 0 auto;\n  padding: $space;\n}\n\n#main-header-image {\n  margin: ($space / 4) auto 0 auto;\n\n  img {\n    width: 200px;\n  }\n}\n\n#news {\n  margin-bottom: $section-spacing;\n}\n\n.pub-section {\n  .pub-info-wrap {\n    .pub-img {\n      display: none;\n    }\n  }\n}\n",
+		"// Spacing\n$site-width: 800px;\n$space: 20px;\n$section-spacing: $space * 1.5;\n\n// Fonts\n$sourcesans: 'Source Sans Pro', sans-serif;\n$code-font: 'Source Code Pro', monospace;\n$bold-weight: 600;\n$body-font-size: 1em;\n\n// Borders\n$heading-border: 1px solid #dedede;\n$header-shadow: 0px 0px 8px 0px #c4c4c4;\n\n// Colors\n$dark-accent: #1f3548;\n$accent: #316694;\n$link: #1d67d6;\n$link-hover: #7aafff;\n$light-grey: #eee;\n\n// Insets\n$inset-grey: #f5f5f5;\n$inset-padding: 15px;\n$inset-border-radius: 3px;\n"
 	],
 	"names": [],
-	"mappings": "AAEA,AAAA,YAAY,AAAC,CACX,SAAS,CAAE,cAAc,CAC1B,AAED,AAAA,iBAAiB,AAAC,CAChB,MAAM,CAAE,MAAM,CACd,OAAO,CCND,IAAI,CDOX,AAED,AAAA,kBAAkB,AAAC,CACjB,MAAM,CAAE,GAAY,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAKjC,AAND,AAGE,kBAHgB,CAGhB,GAAG,AAAC,CACF,KAAK,CAAE,KAAK,CACb,AAGH,AAAA,KAAK,AAAC,CACJ,aAAa,CCjBG,IAAY,CDkB7B"
+	"mappings": "AAEA,AAAA,YAAY,AAAC,CACX,SAAS,CAAE,cAAc,CAC1B,AAED,AAAA,iBAAiB,AAAC,CAChB,MAAM,CAAE,MAAM,CACd,OAAO,CCND,IAAI,CDOX,AAED,AAAA,kBAAkB,AAAC,CACjB,MAAM,CAAE,GAAY,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAKjC,AAND,AAGE,kBAHgB,CAGhB,GAAG,AAAC,CACF,KAAK,CAAE,KAAK,CACb,AAGH,AAAA,KAAK,AAAC,CACJ,aAAa,CCjBG,IAAY,CDkB7B,AAED,AAEI,YAFQ,CACV,cAAc,CACZ,QAAQ,AAAC,CACP,OAAO,CAAE,IAAI,CACd"
 }
